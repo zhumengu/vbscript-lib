@@ -28,7 +28,11 @@ function fmt( str, args )
 
                 ' expand from array.
                 elseif Mid(str,i+1,1)="x" then
-                    res = res & CStr(args(pos))
+                    if typename(args) = "Variant()" then
+                        res = res & CStr(args(pos))
+                    else
+                        res = res & cstr(args)
+                    end if
                     pos = pos+1
                     i = i + 1
 
