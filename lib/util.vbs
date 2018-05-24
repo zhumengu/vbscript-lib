@@ -17,7 +17,7 @@ sub exec(exe)
 end sub
 
 
-sub destory(obj)
+sub destroy(obj)
     set obj = nothing
 end sub
 
