@@ -1,0 +1,6 @@
+Include "file\writefile.vbs"
+Include "file\readfile.vbs"
+Include "file\fparse.vbs"
+Include "file\fileexists.vbs"
+Include "file\filetree.vbs"
+Include "file\randfilename.vbs"
