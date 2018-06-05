@@ -1,4 +1,4 @@
-function connect(DSN, conn)
+function connect(DSN, username, passwd, conn)
     on error resume next
 
     dim rst
@@ -9,7 +9,11 @@ function connect(DSN, conn)
     ' 0 adStateClose
     ' 1 adStateOpen
     if conn.state <> 1 then
-        conn.Open "DSN=" & DSN , 1, 3
+        if username ="" and passwd = "" then
+            conn.Open DSN , 1, 3
+        else
+            conn.Open "DSN=" & DSN, username, passwd
+        end if
     end if
     set connect = conn
 

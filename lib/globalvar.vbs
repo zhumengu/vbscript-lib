@@ -9,6 +9,9 @@ dim folder   ' filesystemobject.folder
 dim ts       ' textstream
 dim ado      ' adodb
 dim xl       ' excel application
+dim workbook ' excel workbook
+dim sheet
+dim i,j,k
 dim dic      ' dictionary
 dim args     ' wscript.args
 set args = wscript.arguments
